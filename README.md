@@ -20,10 +20,6 @@
 
 ![Установка cookie через curl](screen/curl_cookie.png)
 
-В ответе сервера видно:
-- `Set-Cookie: session_id=...; Path=/; Max-Age=3600; HttpOnly; SameSite=Lax`
-- Атрибуты **HttpOnly** (защита от XSS), **SameSite=Lax** (защита от CSRF)
-
 ---
 
 ## 4. Демонстрация CSRF-защиты
