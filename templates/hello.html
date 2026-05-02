@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Приветствие</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .greeting {
+            font-size: 24px;
+            color: #28a745;
+            margin: 30px 0;
+            padding: 20px;
+            background: #e8f5e9;
+            border-radius: 8px;
+        }
+        .links {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .note {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Приветствие</h1>
+        
+        <div class="greeting">
+            Здравствуйте, <strong>{{.Name}}</strong>!
+        </div>
+        
+        <p>Это безопасный вывод имени пользователя через шаблон.</p>
+        <p>HTML-теги в имени будут отображены как текст, а не выполнены.</p>
+        
+        <div class="links">
+            <a href="/profile">Вернуться к профилю</a>
+        </div>
+        
+        <div class="note">
+            <small>Попробуйте ввести в поле имени что-то вроде &lt;script&gt;alert('xss')&lt;/script&gt; — 
+            скрипт не выполнится, а будет показан как текст.</small>
+        </div>
+    </div>
+</body>
+</html>
